@@ -1,0 +1,20 @@
+projection;
+use draft;
+define behavior for ZC_RAP_TRAVEL_NO12 alias Travel
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _Booking { create; with draft; }
+  use action acceptTravel;
+  use action rejectTravel;
+}
+
+define behavior for ZC_RAP_Booking_NO12 alias Booking
+{
+  use update;
+  use delete;
+
+  use association _Travel { with draft; }
+}

@@ -1,0 +1,25 @@
+CLASS zcl_rap_eml_no12 DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+
+    INTERFACES if_oo_adt_classrun .
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS zcl_rap_eml_no12 IMPLEMENTATION.
+  METHOD if_oo_adt_classrun~main.
+
+    READ ENTITIES Of ZI_RAP_TRAVEL_NO12
+      ENTITY TRAVEL All FIELDS WITH VALUE #( ( TravelUUID = '123456789' ) )
+      Result data(result).
+
+
+  ENDMETHOD.
+
+ENDCLASS.
